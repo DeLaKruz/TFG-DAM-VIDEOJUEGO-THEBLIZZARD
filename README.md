@@ -42,7 +42,9 @@
 ## Créditos
 
 **Desarrollador**: Yeray de la Cruz García Bravo
+<br>
 **Institución**: IES Antonio Sequeros
+<br>
 **Curso**: Desarrollo de Aplicaciones Multiplataforma (DAM)
 
 ## Agradecimientos
