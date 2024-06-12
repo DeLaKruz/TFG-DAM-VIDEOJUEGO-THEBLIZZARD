@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-// !!OPTIMIZAR Y REVISAR
-
 public class EnterOtherMap : MonoBehaviour
 {
     public List<GameObject> spriteObjectsToMakeTransparent; // Lista de objetos con SpriteRenderer que se volverán transparentes
@@ -17,7 +15,6 @@ public class EnterOtherMap : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player entered trigger zone.");
             // Inicia la transición para hacer los objetos transparentes
             StartCoroutine(ChangeTransparency(transparencyLevel, transitionDuration));
         }
@@ -28,7 +25,6 @@ public class EnterOtherMap : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Player exited trigger zone.");
             // Inicia la transición para hacer los objetos opacos nuevamente
             StartCoroutine(ChangeTransparency(1.0f, transitionDuration)); // Establecer a completamente opaco
         }
@@ -114,11 +110,6 @@ public class EnterOtherMap : MonoBehaviour
                     Color color = material.color;
                     color.a = alpha;
                     material.color = color;
-                    Debug.Log($"Set material transparency of {spriteRenderer.gameObject.name} to {alpha}");
-                }
-                else
-                {
-                    Debug.LogWarning($"No material found on {spriteRenderer.gameObject.name}");
                 }
             }
         }

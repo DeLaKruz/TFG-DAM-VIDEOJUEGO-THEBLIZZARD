@@ -69,24 +69,36 @@ public class ChangeScene : MonoBehaviour
     // Método llamado cuando otro objeto entra en contacto con el trigger.
     void OnTriggerEnter2D(Collider2D other)
     {
-        // Si el objeto que entra en contacto es el jugador, inicia el proceso de cambio de escena.
+        // Si el objeto que entra en contacto tiene el tag "Player", inicia el proceso de cambio de escena.
         if (other.CompareTag("Player"))
         {
+            // Inicia la transición a negro de la UI.
             UIController.instance.fadeToBlack();
+
+            // Pausa el juego.
             PauseMenu.instance.isPaused = true;
+
+            // Comienza el contador de transición.
             startCount = true;
+
+            // Establece si la siguiente escena es la anterior o la siguiente.
             LevelManager.instance.isPreviousScene = previousScene;
+
+            // Muestra el texto de transición de escena.
             UIController.instance.textoScene.gameObject.SetActive(true);
 
+            // Obtiene el índice de la escena actual.
             int indiceDeLaEscena = SceneManager.GetActiveScene().buildIndex;
 
-
+            // Determina si la transición es a la escena anterior o la siguiente y actualiza el texto.
             if (previousScene)
             {
+                // Si es la escena anterior, pasa el índice de la escena actual menos uno.
                 indexText(indiceDeLaEscena - 1);
             }
             else
             {
+                // Si es la siguiente escena, pasa el índice de la escena actual más uno.
                 indexText(indiceDeLaEscena + 1);
             }
         }
@@ -94,9 +106,11 @@ public class ChangeScene : MonoBehaviour
 
     public void indexText(int indiceDeLaEscena)
     {
+        // Cambia el texto y la música de acuerdo al índice de la escena.
         switch (indiceDeLaEscena)
         {
             case 1:
+                // Configura el texto para "Bosque Profundo" y reproduce la primera pista de música.
                 UIController.instance.textoScene.text = "Bosque Profundo";
                 AudioManager.instance.PlayMusic(0);
                 break;
@@ -110,6 +124,7 @@ public class ChangeScene : MonoBehaviour
                 UIController.instance.textoScene.text = "Parte trasera de la Ciudad";
                 break;
             case 5:
+                // Configura el texto para "VENTISCA ETERNA", reproduce la segunda pista de música y ajusta la posición del jugador.
                 UIController.instance.textoScene.text = "VENTISCA ETERNA";
                 AudioManager.instance.PlayMusic(1);
                 PlayerController.instance.hero.velocity = new Vector2(-13.8f, -3f);

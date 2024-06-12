@@ -100,7 +100,7 @@ public class LevelManager : MonoBehaviour
             GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (GameObject enemy in enemies)
             {
-                // !enemy.instance.endAnim(true); TERMINAR
+                // !enemy.instance.endAnim(true); PROYECTO A FUTURO, REVIVIR LOS ENEMIGOS CUANDO SE MUERE.
             }
             SetPositionOnPreviousScene();
         }

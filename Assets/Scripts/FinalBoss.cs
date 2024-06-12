@@ -32,8 +32,8 @@ public class FinalBoss : MonoBehaviour
 
     void Start()
     {
-        theRB = GetComponent<Rigidbody2D>(); // Inicializa el Rigidbody2D.
-        anim = GetComponent<Animator>(); // Inicializa el Animator.
+        theRB = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
 
         // Desvincula los puntos de ataque y movimiento del enemigo para que no se muevan con él.
         leftAttackPoint.parent = null;
@@ -64,7 +64,7 @@ public class FinalBoss : MonoBehaviour
 
         }
 
-        // Mantiene la posición Z constante para evitar movimientos no deseados en el eje Z.
+        // Mantiene la posición Z constante para evitar movimientos raros en el eje Z.
         transform.position = new Vector3(transform.position.x, transform.position.y, initialZ);
     }
 

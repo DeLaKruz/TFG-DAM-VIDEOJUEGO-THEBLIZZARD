@@ -52,8 +52,7 @@ public class PlayerHealthController : MonoBehaviour
             // Activa la animación de daño del jugador.
             PlayerController.instance.anim.SetTrigger("hurt");
 
-            // Si el jugador muere lo respawnea
-            //!PROVISIONAL PROVISIONAL PROVISIONAL PROVISIONAL
+            // Si el jugador muere activa su muerte
             if (currenthealth <= 0)
             {
                 currenthealth = 0;

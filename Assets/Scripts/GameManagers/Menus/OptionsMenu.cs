@@ -75,10 +75,12 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.onValueChanged.AddListener(delegate { OnResolutionChange(); });
     }
 
+    // Cambiar la resolución elegida.
     public void OnResolutionChange()
     {
         Resolution resolution = uniqueResolutions[resolutionDropdown.value];
 
+        // Si la resolución no es la que viene por defecto, se quita la pantalla completa.
         if (resolution.width == 1920 && resolution.height == 1080)
         {
             Screen.fullScreen = true;
@@ -90,24 +92,28 @@ public class OptionsMenu : MonoBehaviour
         }
     }
 
+    // Ajuste del volumen de la música.
     public void SetMusicVolume()
     {
         float mVolume = musicSlider.value;
         masterMixer.SetFloat("musicVolume", Mathf.Log10(mVolume) * 20);
     }
 
+    // Ajuste del volumen de los efectos de sonido.
     public void SetSFXVolume()
     {
         float sVolume = sfxSlider.value;
         masterMixer.SetFloat("sfxVolume", Mathf.Log10(sVolume) * 20);
     }
 
+    // Cerrar menú de opciones.
     public void CloseOptionsMenu()
     {
         panel.SetActive(false);
         Debug.Log("cerrao");
     }
 
+    // Guardar configuración actual.
     public void SaveOptions()
     {
         OptionsData optionsData = new OptionsData();
@@ -119,6 +125,7 @@ public class OptionsMenu : MonoBehaviour
         File.WriteAllText(Application.persistentDataPath + "/options.json", jsonData);
     }
 
+    // Cargar configuración guardada.
     public void LoadOptions()
     {
         string path = Application.persistentDataPath + "/options.json";
