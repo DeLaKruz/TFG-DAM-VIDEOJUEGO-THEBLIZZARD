@@ -1,8 +1,6 @@
 # The Blizzard - Un Videojuego de Plataformas 2D
 
-<div style="text-align:center">
   [![LOGO.png](https://i.postimg.cc/sfPNMBH6/LOGO.png)](https://postimg.cc/w3vVPBpL)
-</div>
 
 
 ¡Bienvenido a **The Blizzard**!
