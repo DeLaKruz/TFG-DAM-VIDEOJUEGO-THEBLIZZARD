@@ -53,4 +53,4 @@ Quiero agradecer a mis profesores, compañeros y familiares por su apoyo durante
 
 ¡Prepárate para enfrentar la tormenta y embarcarte en una aventura inolvidable en **The Blizzard**! ¡Buena suerte y diviértete!
 
-Para más información, visita nuestro [Repositorio en GitHub](https://github.com/DeLaKruz/TFG-DAM-VIDEOJUEGO-THEBLIZZARD)) o contacta conmigo a través del correo electrónico [Email de Contacto](yerayg466@gmail.com).
+Para más información, visita nuestro [Repositorio en GitHub](https://github.com/DeLaKruz/TFG-DAM-VIDEOJUEGO-THEBLIZZARD) o contacta conmigo a través del correo electrónico [Email de Contacto](yerayg466@gmail.com).
