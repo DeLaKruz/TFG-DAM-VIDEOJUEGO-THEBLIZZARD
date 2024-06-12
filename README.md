@@ -39,6 +39,8 @@
 2. **Extracción**: Extrae el contenido del archivo comprimido en una carpeta de tu elección.
 3. **Ejecución**: Abre la carpeta y ejecuta el archivo `TheBlizzard.exe` para comenzar a jugar.
 
+También puedes instalarlo con el `TheBlizzard-0.5-setup.exe` que hay en la raiz del repositorio.
+
 ## Créditos
 
 **Desarrollador**: Yeray de la Cruz García Bravo
