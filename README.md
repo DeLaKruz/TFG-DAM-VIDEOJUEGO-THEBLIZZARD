@@ -4,8 +4,6 @@
   <img src="https://i.postimg.cc/sfPNMBH6/LOGO.png">
 </p>
 
-
-
 ¡Bienvenido a **The Blizzard**!
 
 **The Blizzard** es un emocionante juego de plataformas 2D desarrollado como Trabajo de Fin de Grado (TFG) de Desarrollo de Aplicaciones Multiplataforma (DAM). Este proyecto destaca por el trabajo dedicado a los detalles, el apartado visual y el diseño de niveles, cuidando al máximo cada detalle para ofrecer una experiencia única y desafiante.
